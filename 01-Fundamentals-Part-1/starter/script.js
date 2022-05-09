@@ -83,8 +83,8 @@ console.log('\n' + '\n' + '\n');
 
 ////////////////////////////////////
 // let, const and var
-let age = 30;
-age = 31;
+// let age = 30;
+// age = 31;
 
 // const birthYear = 1991;
 // birthYear = 1990;
@@ -206,3 +206,20 @@ const firstName = 'John';
 const job = 'Programmer';
 const birthYear = 1994;
 const year = 2037;
+
+const john =
+  "I'm " + firstName + ', a ' + (year - birthYear) + ' year old ' + job + '!';
+
+console.log(john);
+
+const johnNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
+console.log(johnNew);
+
+console.log(`Just a regular string...`);
+
+console.log(`String with \n\
+multiple \n\lines`);
+
+////////////////////////////////////
+// Taking Decisions: if / else Statements
+const age = 15;
