@@ -312,3 +312,20 @@ console.log(Boolean(undefined));
 console.log(Boolean('Jakub'));
 console.log(Boolean({}));
 console.log(Boolean(''));
+
+const money = 100;
+if (money) {
+  console.log("Don't spent it all ;)");
+} else {
+  console.log('You should get a job!');
+}
+
+let height = 0;
+if (height) {
+  console.log('YAY! Height is defined');
+} else {
+  console.log('Height is UNDEFINED');
+}
+
+////////////////////////////////////
+// Equality Operators: == vs. ===
