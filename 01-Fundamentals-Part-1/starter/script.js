@@ -190,30 +190,30 @@ GOOD LUCK 😀
 // const massJohn = 92;
 // const heightJohn = 1.95;
 
-const massMark = 95;
-const heightMark = 1.88;
-const massJohn = 85;
-const heightJohn = 1.76;
+// const massMark = 95;
+// const heightMark = 1.88;
+// const massJohn = 85;
+// const heightJohn = 1.76;
 
-const BMIMark = massMark / heightMark ** 2;
-const BMIJohn = massJohn / (heightJohn * heightJohn);
-const markHigherBMI = BMIMark > BMIJohn;
-console.log('Wynik zadania: ', BMIMark, BMIJohn, markHigherBMI);
+// const BMIMark = massMark / heightMark ** 2;
+// const BMIJohn = massJohn / (heightJohn * heightJohn);
+// const markHigherBMI = BMIMark > BMIJohn;
+// console.log('Wynik zadania: ', BMIMark, BMIJohn, markHigherBMI);
 
 ////////////////////////////////////
 // Strings and Template Literals
-const firstName = 'John';
-const job = 'Programmer';
-const birthYear = 1994;
-const year = 2037;
+// const firstName = 'John';
+// const job = 'Programmer';
+// const birthYear = 1994;
+// const year = 2037;
 
-const john =
-  "I'm " + firstName + ', a ' + (year - birthYear) + ' year old ' + job + '!';
+// const john =
+//   "I'm " + firstName + ', a ' + (year - birthYear) + ' year old ' + job + '!';
 
-console.log(john);
+// console.log(john);
 
-const johnNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
-console.log(johnNew);
+// const johnNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
+// console.log(johnNew);
 
 console.log(`Just a regular string...`);
 
@@ -223,3 +223,45 @@ multiple \n\lines`);
 ////////////////////////////////////
 // Taking Decisions: if / else Statements
 const age = 15;
+
+if (age >= 18) {
+  console.log('Sarah can start driving license 🚗');
+} else {
+  const yearsLeft = 18 - age;
+  console.log(`Sarah is too young. Wait another ${yearsLeft} years :)`);
+}
+
+const birthYear = 2012;
+
+let century;
+if (birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+
+console.log(century);
+
+////////////////////////////////////
+// Coding Challenge #2
+
+// Use the BMI example from Challenge #1, and the code you already wrote, and improve it:
+
+// 1. Print a nice output to the console, saying who has the higher BMI.
+// The message can be either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+// 2. Use a template literal to include the BMI values in the outputs.
+// Example: "Mark's BMI (28.3) is higher than John's (23.9)!"
+
+// HINT: Use an if/else statement 😉
+
+// GOOD LUCK 😀
+
+const massMark = 95;
+const heightMark = 1.88;
+const massJohn = 85;
+const heightJohn = 1.76;
+
+const BMIMark = massMark / heightMark ** 2;
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+const markHigherBMI = BMIMark > BMIJohn;
+console.log('Wynik zadania: ', BMIMark, BMIJohn, markHigherBMI);
