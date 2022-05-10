@@ -77,7 +77,7 @@ let language;
 // console.log(typeof isIsland);
 // console.log(typeof population);
 // console.log(typeof country);
-console.log(language);
+// console.log(typeof language);
 
 // console.log('\n' + '\n' + '\n');
 
@@ -103,7 +103,9 @@ console.log(language);
 // change, and which might change?). Then, change these variables to const.
 // 3. Try to change one of the changed variables now, and observe what happens
 
-language = 'Polish';
+// language = 'Polish';
+// const isIsland = false;
+// isIsland = true;
 
 ////////////////////////////////////
 // Basic Operators
@@ -152,6 +154,14 @@ const description = `${myCountry} is in Europe, and its ${averagePopulation} peo
 console.log(description);
 console.log('\n' + '\n' + '\n');
 
+// LECTURE: Basic Operators
+
+let countryLecture = 4000000;
+console.log(countryLecture / 2);
+countryLecture++;
+console.log(countryLecture);
+
+console.log('TUTAJ JESTEM');
 ////////////////////////////////////
 // Operator Precedence
 const now = 2037;
@@ -332,10 +342,10 @@ if (height) {
 ////////////////////////////////////
 // Equality Operators: == vs. ===
 
-const age = '18';
-if (age === 18) console.log('You just became an adult :D (strict)');
+// const age = '18';
+// if (age === 18) console.log('You just became an adult :D (strict)');
 
-if (age == 18) console.log('You just became an adult :D (loose)');
+// if (age == 18) console.log('You just became an adult :D (loose)');
 
 // const favourite
 
@@ -362,12 +372,12 @@ if (age == 18) console.log('You just became an adult :D (loose)');
 //   prompt('How many neighbours countries does your country have?')
 // );
 
-// if (numNeighbours === 1) console.log(`Only 1 border!`);
-
-// if (numNeighbours > 1) {
+// if (numNeighbours === 1) {
+//   console.log('Only 1 border!');
+// } else if (numNeighbours > 1) {
 //   console.log('More than 1 border');
-// } else if (numNeighbours === 0) {
-//   console.log('no borders');
+// } else {
+//   console.log('No borders');
 // }
 
 ////////////////////////////////////
@@ -538,3 +548,51 @@ if (23 > 10) {
 
 const me = 'Jakub';
 console.log(`I'm ${2037 - 1994} years old ${me}`);
+
+console.log('\n' + '\n' + '\n');
+
+////////////////////////////////////
+// The Conditional (Ternary) Operator
+
+const age = 23;
+// age >= 18
+//   ? console.log('l like to drink wine 🍷')
+//   : console.log('l like to drink water 💧');
+
+const drink = age >= 18 ? 'wine 🍷' : 'water 💧';
+console.log(drink);
+
+let drink2;
+if (age >= 18) {
+  drink2 = 'wine 🍷';
+} else {
+  drink2 = 'water 💧';
+}
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18 ? 'wine 🍷' : 'water 💧'}`);
+
+// LECTURE: The Conditional (Ternary) Operator
+
+const populationPl = 3900000;
+
+console.log(
+  `Poland population is ${populationPl > 3000000 ? 'above' : 'below'} average.`
+);
+
+////////////////////////////////////
+// Coding Challenge #4
+
+/*
+Steven wants to build a very simple tip calculator for whenever he goes eating in a resturant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
+
+1. Your task is to caluclate the tip, depending on the bill value. Create a variable called 'tip' for this. It's not allowed to use an if/else statement 😅 (If it's easier for you, you can start with an if/else statement, and then try to convert it to a ternary operator!)
+2. Print a string to the console containing the bill value, the tip, and the final value (bill + tip). Example: 'The bill was 275, the tip was 41.25, and the total value 316.25'
+
+TEST DATA: Test for bill values 275, 40 and 430
+
+HINT: To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+HINT: Value X is between 50 and 300, if it's >= 50 && <= 300 😉
+
+GOOD LUCK 😀
+*/
