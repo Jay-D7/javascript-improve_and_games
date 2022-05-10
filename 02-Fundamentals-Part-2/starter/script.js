@@ -49,3 +49,39 @@ const descUkraine = describeCountry('Ukraine', 44, 'Kyiv');
 console.log(descPoland);
 console.log(descUkraine);
 console.log(descGermany);
+
+///////////////////////////////////////
+// Function Declarations vs. Expressions
+
+// Function declaration can be called before the initialization
+function calcAge1(birthYeah) {
+  return 2037 - birthYeah;
+}
+const age1 = calcAge1(1994);
+
+// Function expression
+const calcAge2 = function (birthYeah) {
+  return 2037 - birthYeah;
+};
+const age2 = calcAge2(1994);
+
+console.log(age1, age2);
+
+// LECTURE: Function Declarations vs. Expressions
+function percentageOfWorld1(population) {
+  return (population / 7900) * 100;
+}
+
+const percentageOfWorld2 = function (population) {
+  return (population / 7900) * 100;
+};
+
+const percChina1 = percentageOfWorld2(1441);
+const percPoland1 = percentageOfWorld2(1777);
+const percPeru1 = percentageOfWorld2(1734);
+console.log(percChina1);
+console.log(percPoland1);
+console.log(percPeru1);
+
+///////////////////////////////////////
+// Arrow functions
