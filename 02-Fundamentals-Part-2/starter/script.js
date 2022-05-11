@@ -114,6 +114,35 @@ console.log(percPortugal3, percChina3, percUSA3);
 
 ///////////////////////////////////////
 // Functions Calling Other Functions
-// function cutFruitPieces(fruit) {
-//   return fruit * 4;
-// }
+function cutFruitPieces(fruit) {
+  return fruit * 4;
+}
+
+function fruitProcessor(apples, oranges) {
+  const applePieces = cutFruitPieces(apples);
+  const orangePieces = cutFruitPieces(oranges);
+
+  const juice = `Juice with ${applePieces} piece of apple and ${orangePieces} pieces of orange.`;
+  return juice;
+}
+
+console.log(fruitProcessor(2, 3));
+
+//
+// LECTURE: Functions Calling Other Functions
+
+// const describePopulation = (country, population) => `${country} has ${population} million people,
+// which is about 18.2% of the world.'`;
+
+function describePopulation(country, population) {
+  const percentage = percentageOfWorld1(population);
+  const description = `${country} has ${population} million people, which is about ${percentage} of the world.'`;
+  console.log(description);
+}
+
+describePopulation('Portugal', 10);
+describePopulation('Poland', 39);
+describePopulation('Nowhere', 25);
+
+///////////////////////////////////////
+// Reviewing Functions
