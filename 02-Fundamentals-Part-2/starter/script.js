@@ -189,3 +189,34 @@ HINT: To check if number A is at least double number B, check for A >= 2 * B. Ap
 
 GOOD LUCK 😀
 */
+
+console.log(`Challenge #4 \n\n`);
+
+const calcAverage = (a, b, c) => (a + b + c) / 3; // Arrow function stand-alone
+console.log(calcAverage(3, 4, 5));
+
+// TEST 1
+let scoreDolphins = calcAverage(44, 23, 71);
+let scoreKoalas = calcAverage(65, 54, 49);
+console.log(scoreDolphins, scoreKoalas);
+
+// Function expression
+const checkWinner = function (avgDolphins, avgKoalas) {
+  if (avgDolphins >= 2 * avgKoalas) {
+    console.log(`Dolphins wins 🏆  (${avgDolphins} vs ${avgKoalas})`);
+  } else if (avgKoalas >= 2 * avgDolphins) {
+    console.log(`Dolphins wins 🏆  ${avgDolphins} vs ${avgKoalas}`);
+  } else {
+    console.log('No teams wins..');
+  }
+};
+
+checkWinner(scoreDolphins, scoreKoalas);
+
+checkWinner(576, 111);
+
+// TEST 2
+scoreDolphins = calcAverage(85, 54, 41);
+scoreKoalas = calcAverage(23, 34, 27);
+console.log(scoreDolphins, scoreKoalas);
+checkWinner(scoreDolphins, scoreKoalas);
