@@ -55,18 +55,18 @@ console.log(descGermany);
 // Function Declarations vs. Expressions
 
 // Function declaration can be called before the initialization
-function calcAge1(birthYeah) {
-  return 2037 - birthYeah;
-}
-const age1 = calcAge1(1994);
+// function calcAge1(birthYeah) {
+//   return 2037 - birthYeah;
+// }
+// const age1 = calcAge1(1994);
 
-// Function expression
-const calcAge2 = function (birthYeah) {
-  return 2037 - birthYeah;
-};
-const age2 = calcAge2(1994);
+// // Function expression
+// const calcAge2 = function (birthYeah) {
+//   return 2037 - birthYeah;
+// };
+// const age2 = calcAge2(1994);
 
-console.log(age1, age2);
+// console.log(age1, age2);
 
 //
 // LECTURE: Function Declarations vs. Expressions
@@ -89,9 +89,9 @@ console.log(percPeru1);
 // Arrow functions
 // Arrow functions don't have 'this' keyword
 
-const calcAge3 = (birthYeah) => 2022 - birthYeah;
-const age3 = calcAge3(1994);
-console.log(age3);
+// const calcAge3 = (birthYeah) => 2022 - birthYeah;
+// const age3 = calcAge3(1994);
+// console.log(age3);
 
 // const yearsUntilRetirement = (birthYeah, firstName) => {
 //   const age = 2022 - birthYeah;
@@ -147,25 +147,25 @@ describePopulation('Nowhere', 25);
 ///////////////////////////////////////
 // Reviewing Functions
 
-const calcAge = function (birthYeah) {
-  return 2037 - birthYeah;
-};
+// const calcAge = function (birthYeah) {
+//   return 2037 - birthYeah;
+// };
 
-const yearsUntilRetirement = function (birthYeah, firstName) {
-  const age = calcAge(birthYeah);
-  const retirement = 65 - age;
+// const yearsUntilRetirement = function (birthYeah, firstName) {
+//   const age = calcAge(birthYeah);
+//   const retirement = 65 - age;
 
-  if (retirement > 0) {
-    console.log(`${firstName} retires in ${retirement} years`);
-    return retirement;
-  } else {
-    console.log(`${firstName} has already retired 🎉`);
-    return -1;
-  }
-};
+//   if (retirement > 0) {
+//     console.log(`${firstName} retires in ${retirement} years`);
+//     return retirement;
+//   } else {
+//     console.log(`${firstName} has already retired 🎉`);
+//     return -1;
+//   }
+// };
 
-console.log(yearsUntilRetirement(1994, 'Jakub'));
-console.log(yearsUntilRetirement(1970, 'Amanda'));
+// console.log(yearsUntilRetirement(1994, 'Jakub'));
+// console.log(yearsUntilRetirement(1970, 'Amanda'));
 
 ///////////////////////////////////////
 // Coding Challenge #1
@@ -220,3 +220,65 @@ scoreDolphins = calcAverage(85, 54, 41);
 scoreKoalas = calcAverage(23, 34, 27);
 console.log(scoreDolphins, scoreKoalas);
 checkWinner(scoreDolphins, scoreKoalas);
+
+//
+console.log(`\n\n ARRAYS \n`);
+///////////////////////////////////////
+// Introduction to Arrays
+const friend1 = 'Tony';
+const friend2 = 'Steve';
+const friend3 = 'Peter';
+
+const friends = ['Tony', 'Steve', 'Peter'];
+console.log(friends);
+
+const y = new Array(1994, 1984, 2008, 2020);
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]); // Get last element
+
+friends[2] = 'Jay';
+console.log(friends);
+// friends = ['Bob', 'Alice']; We don't do that here 😏
+
+const firstName = 'Paul';
+const Paul = [firstName, 'Walker', 1973 - 2013, 'teacher', friends];
+
+console.log(Paul);
+console.log(Paul.length);
+
+//Exercise
+const calcAge = function (birthYeah) {
+  return 2037 - birthYeah;
+};
+
+const years = [1990, 1967, 2002, 2010, 2018];
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+console.log(age1, age2, age3);
+
+const ages = [
+  calcAge(years[0]),
+  calcAge(years[1]),
+  calcAge(years[years.length - 1]),
+];
+console.log(ages);
+
+//
+// LECTURE: Introduction to Arrays
+const populations = ['39', '2334', '55', '80'];
+console.log(populations.length === 4);
+
+const percentages = [
+  percentageOfWorld1(populations[0]),
+  percentageOfWorld1(populations[1]),
+  percentageOfWorld1(populations[2]),
+  percentageOfWorld1(populations[3]),
+];
+
+console.log(percentages);
