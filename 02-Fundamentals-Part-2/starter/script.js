@@ -447,19 +447,16 @@ console.log(
 );
 
 // LECTURE: Dot vs. Bracket Notation
-// const myCountry = {
-//   country: 'Poland',
-//   capitalCity: 'Warsaw',
-//   language: 'Polish',
-//   population: 3900000,
-//   neighbours: ['germany', 'ukraine', 'Slovenia'],
-// };
 
-// console.log(myCountry);
+// Added Function Expression
+const myCountrySentence = function () {
+  console.log(
+    `${myCountry.country} has ${myCountry.population} ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbours and a capital called ${myCountry.capitalCity}`
+  );
+  return;
+};
 
-console.log(
-  `${myCountry.country} has ${myCountry.population} ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbours and a capital called ${myCountry.capitalCity}`
-);
+myCountrySentence();
 
 console.log(myCountry.population * 2);
 console.log(myCountry['population'] / 2);
