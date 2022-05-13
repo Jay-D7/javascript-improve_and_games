@@ -318,6 +318,27 @@ if (friends.includes('Steven')) {
   console.log('I think you dont');
 }
 
+// LECTURE: Basic Array Operations (Methods)
+
+const neighbours = ['Germany', 'Ukraine', 'Slovenia'];
+const newCountry = neighbours.push('Utopia');
+console.log(neighbours);
+console.log(newCountry);
+neighbours.pop();
+const dissolvedCountry = neighbours.pop();
+console.log(dissolvedCountry);
+console.log(neighbours);
+
+if (!neighbours.includes('USA')) {
+  console.log('Probably not a central European country');
+}
+
+// console.log(neighbours.indexOf('Ukraine'));
+// neighbours[1] = 'Republic of Ukraine';
+// console.log(neighbours);
+neighbours[neighbours.indexOf('Ukraine')] = 'Republic of Ukraine';
+console.log(neighbours);
+
 ///////////////////////////////////////
 // Coding Challenge #2
 
