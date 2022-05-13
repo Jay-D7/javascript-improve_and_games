@@ -396,6 +396,20 @@ const myCountry = {
   language: 'Polish',
   population: 3900000,
   neighbours: ['germany', 'ukraine', 'Slovenia'],
+
+  describe: function () {
+    console.log(
+      `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capitalCity}`
+    );
+    // return;
+  },
+
+  checkIsland: function () {
+    // this.isIsland = this.neighbours.length === 0 ? true : false;
+
+    // Even simpler version (see why this works...)
+    this.isIsland = !Boolean(this.neighbours.length);
+  },
 };
 
 console.log(myCountry);
@@ -508,6 +522,12 @@ console.log(john1.calcAge());
 // Challenge
 // "John is a 46-year old teacher, and he has a driver's license"
 console.log(john1.getSummary());
+
+// LECTURE: Object Methods
+
+myCountry.describe();
+myCountry.checkIsland();
+console.log(myCountry);
 
 ///////////////////////////////////////
 // Coding Challenge #3
