@@ -387,3 +387,82 @@ const John = [
   'Assasin',
   ['Peter', 'Tony', 'Martha'],
 ];
+
+// LECTURE: Introduction to Objects
+
+const myCountry = {
+  country: 'Poland',
+  capitalCity: 'Warsaw',
+  language: 'Polish',
+  population: 3900000,
+  neighbours: ['germany', 'ukraine', 'Slovenia'],
+};
+
+console.log(myCountry);
+
+///////////////////////////////////////
+// Dot vs. Bracket Notation
+const john = {
+  firstName: 'John',
+  lastName: 'Wick',
+  age: 2037 - 1994,
+  job: 'Assasin',
+  friends: ['Peter', 'Tony', 'Martha'],
+};
+console.log(john);
+
+console.log(john.lastName);
+console.log(john['lastName']);
+
+const nameKey = 'Name';
+console.log(john['first' + nameKey], john['last' + nameKey]);
+// console.log(john['last' + nameKey]);
+
+// console.log(john.'last' + nameKey); can't do this with dot '.'
+
+// const interestedIn =
+
+// const interestedIn = prompt(
+//   'What do you want to know about John? Choose between firstName, lastName, age, job, and friends'
+// );
+
+// console.log(interestedIn);
+
+// if (john[interestedIn]) {
+//   console.log(john[interestedIn]);
+// } else {
+//   console.log(
+//     'Wrong request! Choose between firstName, lastName, age, job, and friends'
+//   );
+// }
+
+john.location = 'Poland';
+john['twitter'] = '@johnwick';
+console.log(john);
+
+// Challenge
+// "John has 3 friends, and his best friend is called Tony"
+console.log(
+  `${john.firstName} has ${john.friends.length} friends, and his best friend is called ${john.friends[1]}`
+);
+
+// LECTURE: Dot vs. Bracket Notation
+// const myCountry = {
+//   country: 'Poland',
+//   capitalCity: 'Warsaw',
+//   language: 'Polish',
+//   population: 3900000,
+//   neighbours: ['germany', 'ukraine', 'Slovenia'],
+// };
+
+// console.log(myCountry);
+
+console.log(
+  `${myCountry.country} has ${myCountry.population} ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbours and a capital called ${myCountry.capitalCity}`
+);
+
+console.log(myCountry.population * 2);
+console.log(myCountry['population'] / 2);
+
+///////////////////////////////////////
+// Object Methods
