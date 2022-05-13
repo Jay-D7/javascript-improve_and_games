@@ -229,7 +229,7 @@ const friend1 = 'Tony';
 const friend2 = 'Steve';
 const friend3 = 'Peter';
 
-const friends = ['Tony', 'Steve', 'Peter'];
+let friends = ['Tony', 'Steve', 'Peter'];
 console.log(friends);
 
 const y = new Array(1994, 1984, 2008, 2020);
@@ -282,3 +282,38 @@ const percentages = [
 ];
 
 console.log(percentages);
+
+///////////////////////////////////////
+// Basic Array Operations (Methods)
+friends = ['Michael', 'Steven', 'Peter'];
+
+// Add new elements
+const newLength = friends.push('Jay');
+console.log(friends);
+console.log(newLength);
+
+friends.unshift('John');
+console.log(friends);
+
+// Remove elements
+friends.pop(); // Last
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+friends.shift(); // First element
+console.log(friends);
+
+console.log(friends.indexOf('Steven'));
+console.log(friends.indexOf('Bob')); // There is no value like this in array
+
+friends.push(23);
+console.log(friends.includes('Steven'));
+console.log(friends.includes('Bob'));
+console.log(friends.includes(23));
+
+if (friends.includes('Steven')) {
+  console.log('You have a friend called Steven');
+} else {
+  console.log('I think you dont');
+}
