@@ -354,7 +354,8 @@ Use the function type you like the most. Test the function using a bill value of
 
 TEST DATA: 125, 555 and 44
 
-HINT: Remember that an array needs a value in each position, and that value can actually be the returned value of a function! So you can just call a function as array values (so don't store the tip values in separate variables first, but right in the new array) 😉
+HINT: Remember that an array needs a value in each position, and that value can actually be the returned value of a function!
+So you can just call a function as array values (so don't store the tip values in separate variables first, but right in the new array) 😉
 
 GOOD LUCK 😀
 */
@@ -372,21 +373,24 @@ console.log(totals);
 
 ///////////////////////////////////////
 // Introduction to Objects
-const JohnArray = [
-  'John',
-  'Wick',
-  1945 - 2037,
-  'Assasin',
-  ['Peter', 'Tony', 'Martha'],
-];
 
-const John = {
-  firstName: 'John',
-  lastName: 'Wick',
-  age: 1945 - 2037,
-  job: 'Assasin',
-  friends: ['Peter', 'Tony', 'Martha'],
-};
+// Array
+// const JohnArray = [
+//   'John',
+//   'Wick',
+//   1945 - 2037,
+//   'Assasin',
+//   ['Peter', 'Tony', 'Martha'],
+// ];
+
+// Object
+// const John = {
+//   firstName: 'John',
+//   lastName: 'Wick',
+//   age: 1945 - 2037,
+//   job: 'Assasin',
+//   friends: ['Peter', 'Tony', 'Martha'],
+// };
 
 // LECTURE: Introduction to Objects
 
@@ -603,10 +607,81 @@ console.log(`\n Loops \n\n`);
 // console.log('Lifting weights repetition 10 🏋🏼‍♂️');
 
 // for loop keeps running while condition is TRUE
-
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weights repetition ${rep} 🏋🏼‍♂️`);
 }
 
+// LECTURE: Iteration: The for Loop
+for (let i = 1; i <= 50; i++) {
+  console.log(`Voter number ${i} is actually voting`);
+}
+
 ///////////////////////////////////////
 // Looping Arrays, Breaking and Continuing
+const johnArray = [
+  'John',
+  'Wick',
+  2022 - 1994,
+  'Assasin',
+  ['Peter', 'Tony', 'Martha'],
+  true,
+];
+const types = [];
+
+// console.log(johnArray[0]);
+// console.log(johnArray[1]);
+// ...
+// console.log(johnArray[4]);
+// johnArray[5]; does NOT exist
+
+for (let i = 0; i < johnArray.length; i++) {
+  // Reading from john array
+  console.log(johnArray[i], typeof johnArray[i]);
+
+  // Filling types array
+  // types[i] = typeof johnArray[i];
+  types.push(typeof johnArray[i]);
+}
+
+console.log(types);
+
+const years1 = [1991, 2007, 1969, 2020];
+const ages1 = [];
+
+for (let i = 0; i < years1.length; i++) {
+  ages1.push(2037 - years1[i]);
+}
+console.log(ages1);
+
+// continue and break
+console.log(`--- ONLY STRINGS ---`);
+for (let i = 0; i < johnArray.length; i++) {
+  if (typeof johnArray[i] !== 'string') continue;
+
+  console.log(johnArray[i], typeof johnArray[i]);
+}
+
+console.log(`--- BREAK WITH NUMBER ---`);
+for (let i = 0; i < johnArray.length; i++) {
+  if (typeof johnArray[i] === 'number') break;
+
+  console.log(johnArray[i], typeof johnArray[i]);
+}
+
+// LECTURE: Looping Arrays, Breaking & Continuing
+const populations1 = [10, 1441, 332, 83];
+const percentages2 = [];
+
+for (let i = 0; i < populations1.length; i++) {
+  const perc = percentageOfWorld1(populations1[i]);
+  percentages2.push(perc);
+}
+
+console.log(percentages2);
+
+// 2. Use a for loop to compute an array called 'percentages2' containing the
+// percentages of the world population for the 4 population values. Use the
+// function 'percentageOfWorld1' that you created earlier
+// 3. Confirm that 'percentages2' contains exactly the same values as the
+// 'percentages' array that we created manually in the previous assignment,
+// and reflect on how much better this solution is
