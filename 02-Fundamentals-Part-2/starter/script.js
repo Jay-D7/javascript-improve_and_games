@@ -380,13 +380,13 @@ const JohnArray = [
   ['Peter', 'Tony', 'Martha'],
 ];
 
-const John = [
-  'John',
-  'Wick',
-  1945 - 2037,
-  'Assasin',
-  ['Peter', 'Tony', 'Martha'],
-];
+const John = {
+  firstName: 'John',
+  lastName: 'Wick',
+  age: 1945 - 2037,
+  job: 'Assasin',
+  friends: ['Peter', 'Tony', 'Martha'],
+};
 
 // LECTURE: Introduction to Objects
 
@@ -395,13 +395,13 @@ const myCountry = {
   capitalCity: 'Warsaw',
   language: 'Polish',
   population: 3900000,
-  neighbours: ['germany', 'ukraine', 'Slovenia'],
+  neighbours: ['Germany', 'Ukraine', 'Slovenia'],
 
   describe: function () {
     console.log(
       `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capitalCity}`
     );
-    // return;
+    return;
   },
 
   checkIsland: function () {
@@ -409,6 +409,7 @@ const myCountry = {
 
     // Even simpler version (see why this works...)
     this.isIsland = !Boolean(this.neighbours.length);
+    return;
   },
 };
 
@@ -432,7 +433,7 @@ const nameKey = 'Name';
 console.log(john['first' + nameKey], john['last' + nameKey]);
 // console.log(john['last' + nameKey]);
 
-// console.log(john.'last' + nameKey); can't do this with dot '.'
+// console.log(john.'last' + nameKey); // can't do this with dot '.'
 
 // const interestedIn =
 
@@ -543,3 +544,45 @@ TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.9
 
 GOOD LUCK 😀
 */
+
+// 1.
+const mark = {
+  fullName: 'Mark Miller',
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    //  mass / height ** 2 = mass / (height * height). = BMI
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+const john2 = {
+  fullName: 'John Smith',
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    //  mass / height ** 2 = mass / (height * height). = BMI
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+mark.calcBMI();
+john2.calcBMI();
+console.log(mark);
+console.log(mark.bmi);
+console.log(john2);
+console.log(john2.bmi);
+
+console.log(mark.bmi, john2.bmi);
+
+if (mark.bmi > john2.bmi) {
+  console.log(
+    `${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john2.fullName}'s (${john2.bmi})`
+  );
+} else if (john.bmi > mark.bmi) {
+  console.log(
+    `${john2.fullName}'s BMI (${john2.bmi}) is higher than ${mark.fullName}'s(${mark.bmi})`
+  );
+}
