@@ -679,9 +679,52 @@ for (let i = 0; i < populations1.length; i++) {
 
 console.log(percentages2);
 
-// 2. Use a for loop to compute an array called 'percentages2' containing the
-// percentages of the world population for the 4 population values. Use the
-// function 'percentageOfWorld1' that you created earlier
-// 3. Confirm that 'percentages2' contains exactly the same values as the
-// 'percentages' array that we created manually in the previous assignment,
-// and reflect on how much better this solution is
+///////////////////////////////////////
+// Looping Backwards and Loops in Loops
+const paul = [
+  'Paul',
+  'Walker',
+  2022 - 1994,
+  'driver',
+  ['Michael', 'Peter', 'Steven'],
+  true,
+];
+
+// 0, 1, ..., 4
+// 4, 3, ..., 0
+
+for (let i = paul.length - 1; i >= 0; i--) {
+  console.log(i, paul[i]);
+}
+
+// Loop in Loop
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`--------- Starting exercise ${exercise}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋🏼‍♂️`);
+  }
+}
+
+// LECTURE: Looping Backwards and Loops in Loops
+const listOfNeighbours = [
+  ['Canada', 'Mexico'],
+  ['Spain'],
+  ['Norway', 'Sweden', 'Poland'],
+];
+
+// change to function
+// newFunction();
+// function newFunction() {
+//   for (let i = 0; i < listOfNeighbours.length; i++) {
+//     // console.log(i, listOfNeighbours[i]);
+//     for (let y = 0; y < listOfNeighbours[i].length; y++) {
+//       console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
+//     }
+//   }
+// }
+
+// shortcut
+for (let i = 0; i < listOfNeighbours.length; i++)
+  for (let y = 0; y < listOfNeighbours[i].length; y++)
+    console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
