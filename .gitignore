@@ -1,6 +1,4 @@
-*/.DS_Store
 **/final
-02-Fundamentals-Part-2
 03-Developer-Skills
 04-HTML-CSS
 05-Guess-My-Number
@@ -17,3 +15,5 @@
 16-Asynchronous
 17-Modern-JS-Modules-Tooling
 18-forkify
+*/.DS_Store
+.DS_Store
