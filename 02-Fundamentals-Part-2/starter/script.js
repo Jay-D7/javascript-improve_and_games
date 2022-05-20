@@ -728,3 +728,36 @@ const listOfNeighbours = [
 for (let i = 0; i < listOfNeighbours.length; i++)
   for (let y = 0; y < listOfNeighbours[i].length; y++)
     console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
+
+///////////////////////////////////////
+// The while Loop
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repetition ${rep} 🏋🏼‍♂️`);
+// }
+
+let rep = 1;
+while (rep <= 10) {
+  console.log(`WHILE: Lifting weights repetition ${rep} 🏋🏼‍♂️`);
+  rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice != 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log('Loop is about to end...');
+}
+
+// LECTURE: The while Loop
+// const populations1 = [10, 1441, 332, 83];
+const percentages3 = [];
+let i = 0;
+
+while (i < populations1.length) {
+  const perc = percentageOfWorld1(populations1[i]);
+  percentages3.push(perc);
+  i++;
+}
+
+console.log(percentages3);
