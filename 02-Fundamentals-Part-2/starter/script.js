@@ -271,7 +271,7 @@ console.log(ages);
 
 //
 // LECTURE: Introduction to Arrays
-const populations = ['39', '2334', '55', '80'];
+const populations = [39, 2334, 55, 80];
 console.log(populations.length === 4);
 
 const percentages = [
@@ -399,7 +399,7 @@ const myCountry = {
   capitalCity: 'Warsaw',
   language: 'Polish',
   population: 3900000,
-  neighbours: ['Germany', 'Ukraine', 'Slovenia'],
+  neighbours: ['Germany', 'Ukraine', 'Slovakia'],
 
   describe: function () {
     console.log(
