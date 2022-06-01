@@ -27,7 +27,6 @@ const showNumber = number => {
 const setScore = labelScore => {
   document.querySelector('.score').textContent = labelScore;
 };
-// const number = function /
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
