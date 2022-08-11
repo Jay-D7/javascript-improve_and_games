@@ -15,6 +15,11 @@ console.log(countryDe);
 console.log(countryUs);
 
 console.log('\n 2');
+
+// const percChina = percentageOfWorld1(1441);
+// const percUSA = percentageOfWorld1(2000);
+// const percPoland = percentageOfWorld1(4000);
+
 // declaration
 function percentageOfWorld1(population) {
   return (population / 7900) * 100;
@@ -24,9 +29,6 @@ const percentageOfWorld2 = function (population) {
   return (population / 7900) * 100;
 };
 
-// const percChina = percentageOfWorld1(1441);
-// const percUSA = percentageOfWorld1(2000);
-// const percPoland = percentageOfWorld1(4000);
 const percChina = percentageOfWorld2(1441);
 const percUSA = percentageOfWorld2(2000);
 const percPoland = percentageOfWorld2(4000);
