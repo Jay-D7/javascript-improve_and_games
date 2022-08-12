@@ -35,7 +35,6 @@ document.querySelector('.check').addEventListener('click', function () {
   // When there is no input
   if (!guess) {
     displayMessage('⛔️ No number');
-    s;
     // When players wins
   } else if (guess === secretNumber) {
     displayMessage('🎉 Correct number!');
