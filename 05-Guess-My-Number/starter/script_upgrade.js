@@ -23,6 +23,12 @@ const checkNumber = function () {
 
       document.querySelector('body').style.backgroundColor = '#60b347';
       winResizeWindow.style.width = '30rem';
+
+      if (score > highscore) {
+        highscore = score;
+        document.querySelector('.highscore').textContent = highscore;
+      }
+      //
     } else if (guess > secretNumber) {
       // When guess is too high
       if (score > 1) {
@@ -53,7 +59,7 @@ checkNumber();
 
 const resetGame = function () {
   document.querySelector('.again').addEventListener('click', () => {
-    // secretNumber = Math.trunc(Math.random() * 20) + 1;
+    secretNumber = Math.trunc(Math.random() * 20) + 1;
     score = 20;
 
     document.querySelector('.message').textContent = 'Start guessing...';
