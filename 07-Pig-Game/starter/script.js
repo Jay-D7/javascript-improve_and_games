@@ -17,7 +17,7 @@ let scores, currentScore, activePlayer, playing;
 
 //Starting conditions
 
-const init = function () {
+const init = () => {
   scores = [0, 0];
   currentScore = 0;
   activePlayer = 0;
@@ -36,7 +36,7 @@ const init = function () {
 };
 init();
 
-const switchPlayer = function () {
+const switchPlayer = () => {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
   currentScore = 0;
   activePlayer = activePlayer === 0 ? 1 : 0;
@@ -45,7 +45,7 @@ const switchPlayer = function () {
 };
 
 //Rolling dice functionality
-btnRoll.addEventListener('click', function () {
+btnRoll.addEventListener('click', () => {
   if (playing) {
     // 1. Generating a random dice roll
     const dice = Math.trunc(Math.random() * 6) + 1;
@@ -68,7 +68,7 @@ btnRoll.addEventListener('click', function () {
   }
 });
 
-btnHold.addEventListener('click', function () {
+btnHold.addEventListener('click', () => {
   if (playing) {
     // 1. Add current score to active players's score
     scores[activePlayer] += currentScore;
