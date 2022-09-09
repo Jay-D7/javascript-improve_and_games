@@ -133,43 +133,43 @@ f();
 ///////////////////////////////////////
 // Regular Functions vs. Arrow Functions
 
-var firstName = 'Matilda';
-// Global scope, it's just a way that we literally define objects
-const john = {
-  firstName: 'John',
-  year: 1994,
+// var firstName = 'Matilda';
+// // Global scope, it's just a way that we literally define objects
+// const john = {
+//   firstName: 'John',
+//   year: 1994,
 
-  calcAge: function () {
-    // console.log(this);
-    console.log(2037 - this.year);
+//   calcAge: function () {
+//     // console.log(this);
+//     console.log(2037 - this.year);
 
-    // Solution 1
-    // const self = this; // 'self' or 'that' pre ES6 solution
-    // const isMillenial = function () {
-    //   console.log(self);
-    //   console.log(self.year >= 1981 && self.year <= 1996);
-    //   // console.log(this.year >= 1981 && this.year <= 1996);
-    // };
+//     // Solution 1
+//     // const self = this; // 'self' or 'that' pre ES6 solution
+//     // const isMillenial = function () {
+//     //   console.log(self);
+//     //   console.log(self.year >= 1981 && self.year <= 1996);
+//     //   // console.log(this.year >= 1981 && this.year <= 1996);
+//     // };
 
-    // Solutiuon 2
-    const isMillenial = () => {
-      console.log(this);
-      console.log(this.year >= 1981 && this.year <= 1996);
-      // console.log(this.year >= 1981 && this.year <= 1996);
-    };
+//     // Solutiuon 2
+//     const isMillenial = () => {
+//       console.log(this);
+//       console.log(this.year >= 1981 && this.year <= 1996);
+//       // console.log(this.year >= 1981 && this.year <= 1996);
+//     };
 
-    isMillenial();
-  },
+//     isMillenial();
+//   },
 
-  // in this case it return a undefined cuz it's a arrow function which has global scope
-  greet: () => {
-    console.log(this);
-    console.log(`Hey ${this.firstName}`);
-  },
-};
+//   // in this case it return a undefined cuz it's a arrow function which has global scope
+//   greet: () => {
+//     console.log(this);
+//     console.log(`Hey ${this.firstName}`);
+//   },
+// };
 
-john.greet();
-john.calcAge();
+// john.greet();
+// john.calcAge();
 
 // arguments keyword
 // is only available in regular functions
@@ -186,3 +186,22 @@ john.calcAge();
 //   a + b;
 // };
 // addArrow(2, 5, 7);
+
+///////////////////////////////////////
+// Objects vs. primitives
+
+let age = 30;
+let oldAge = age;
+age = 31;
+console.log(age);
+console.log(oldAge);
+
+const me = {
+  name: 'Jakub',
+  age: 28,
+};
+
+const friend = me;
+friend.age = 25;
+console.log('Friend', friend);
+console.log('Me', me);
