@@ -94,6 +94,7 @@ console.log(z === window.z);
 
 // console.log(this);
 
+/*
 const calcAge = function (birthYear) {
   console.log(2037 - birthYear);
   // console.log(this);
@@ -126,3 +127,62 @@ matilda.calcAge();
 
 const f = john.calcAge;
 f();
+
+*/
+
+///////////////////////////////////////
+// Regular Functions vs. Arrow Functions
+
+var firstName = 'Matilda';
+// Global scope, it's just a way that we literally define objects
+const john = {
+  firstName: 'John',
+  year: 1994,
+
+  calcAge: function () {
+    // console.log(this);
+    console.log(2037 - this.year);
+
+    // Solution 1
+    // const self = this; // 'self' or 'that' pre ES6 solution
+    // const isMillenial = function () {
+    //   console.log(self);
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    //   // console.log(this.year >= 1981 && this.year <= 1996);
+    // };
+
+    // Solutiuon 2
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+      // console.log(this.year >= 1981 && this.year <= 1996);
+    };
+
+    isMillenial();
+  },
+
+  // in this case it return a undefined cuz it's a arrow function which has global scope
+  greet: () => {
+    console.log(this);
+    console.log(`Hey ${this.firstName}`);
+  },
+};
+
+john.greet();
+john.calcAge();
+
+// arguments keyword
+// is only available in regular functions
+// const addExpr = function (a, b) {
+//   console.log(arguments);
+//   return a + b;
+// };
+
+// addExpr(2, 5);
+// addExpr(2, 5, 8, 12);
+
+// var addArrow = (a, b) => {
+//   console.log(arguments);
+//   a + b;
+// };
+// addArrow(2, 5, 7);
