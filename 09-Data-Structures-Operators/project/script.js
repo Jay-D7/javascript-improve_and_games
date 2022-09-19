@@ -51,16 +51,18 @@ const restaurant = {
 ///////////////////////////////////////
 // The Spread Operator (...)
 const arr = [7, 8, 9];
-const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]]; // Old way
 console.log(badNewArr);
 
 // const newArr = [1, 2, arr]; // without dots get array inside in this array.
-const newArr = [1, 2, ...arr];
+const newArr = [1, 2, ...arr]; // ES6 Spread ...
 console.log(newArr);
 
+// Logged individual elements of the array
 console.log(...newArr);
 console.log(1, 2, 7, 8, 9);
 
+// Add element
 const newMenu = [...restaurant.mainMenu, 'Gnocci'];
 console.log(newMenu);
 
@@ -87,7 +89,7 @@ const ingrednients = [
 ];
 console.log(ingrednients);
 
-restaurant.orderPasta(ingrednients[0], ingrednients[1], ingrednients[2]); // Old way
+// restaurant.orderPasta(ingrednients[0], ingrednients[1], ingrednients[2]); // Old way
 restaurant.orderPasta(...ingrednients); // New way (...) ES6
 
 // Objects
