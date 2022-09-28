@@ -54,6 +54,18 @@ const restaurant = {
 };
 
 ///////////////////////////////////////
+// The Nullish Coalescing Operator
+
+restaurant.numGuests = 0;
+const guests = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests);
+
+// Nullish: null and undefined (NOT 0 or '') Introduced in ES2020
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
+
+/*
+///////////////////////////////////////
 // Short Circuiting (&& and ||)
 
 console.log('---- OR ----');
@@ -83,6 +95,7 @@ console.log('Hello' && 23 && null && 'Jacob');
 if (restaurant.orderPizza) restaurant.orderPizza('mushrooms', 'spinach');
 
 restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+*/
 
 /*
 ///////////////////////////////////////
