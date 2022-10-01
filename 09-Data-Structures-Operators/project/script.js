@@ -56,6 +56,44 @@ const restaurant = {
 };
 
 ///////////////////////////////////////
+// Sets
+
+const ordersSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+console.log(ordersSet);
+
+console.log(new Set('Jakub'));
+
+console.log(ordersSet.size);
+console.log(ordersSet.has('Pizza'));
+console.log(ordersSet.has('Bread'));
+ordersSet.add('Garlic Bread');
+ordersSet.delete('Risotto');
+// ordersSet.clear();
+console.log(ordersSet);
+
+for (const order of ordersSet) console.log(order);
+
+// Example
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+
+// console.log(
+//   new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size
+// ); Same Below ⬇
+console.log(new Set(staff).size);
+
+console.log(new Set('jakubdragowski').size);
+
+/*
+///////////////////////////////////////
 // Coding Challenge #2
 
 /* 
@@ -77,7 +115,6 @@ BONUS: Create an object called 'scorers' which contains the names of the players
       }
 
 GOOD LUCK 😀
-*/
 
 const game = {
   team1: 'Bayern Munich',
@@ -153,8 +190,9 @@ for (const player of game.scored) {
   scorers[player] ? scorers[player]++ : (scorers[player] = 1);
 }
 console.log(scorers);
+*/
 
-console.log(`---Looping Objects----`);
+/*
 ///////////////////////////////////////
 // Looping Objects: Object Keys, Values, and Entries
 const properties = Object.keys(openingHours);
@@ -180,6 +218,7 @@ const entries = Object.entries(openingHours);
 for (const [key, { open, close }] of entries) {
   console.log(`On ${key} we open at ${open} and close ${close}`);
 }
+*/
 
 /*
 ///////////////////////////////////////
