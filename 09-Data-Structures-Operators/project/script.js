@@ -146,7 +146,7 @@ for (const [team, odd] of gameOdds) {
   const teamStr = team === 'x' ? 'draw' : `${game[team]}`;
   console.log(`Odd of ${teamStr} ${odd}`);
 }
-
+//Check
 // 4. BONUS
 const scorers = {};
 for (const player of game.scored) {
