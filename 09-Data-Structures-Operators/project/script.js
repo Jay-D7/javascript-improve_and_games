@@ -128,9 +128,9 @@ for (const [i, player] of scored) {
 }
 
 // 2.
+let average = 0;
 const odds = Object.values(game.odds);
 console.log(odds);
-let average = 0;
 
 for (const odd of odds) {
   average += odd;
@@ -143,7 +143,7 @@ console.log(average);
 const gameOdds = Object.entries(game.odds);
 
 for (const [team, odd] of gameOdds) {
-  const teamStr = team === 'x' ? 'draw' : `${game[team]}`;
+  const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
   console.log(`Odd of ${teamStr} ${odd}`);
 }
 
