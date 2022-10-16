@@ -56,6 +56,64 @@ const restaurant = {
 };
 
 ///////////////////////////////////////
+// Working With Strings - Part 3
+
+// split and join
+console.log('a+very+nice+string'.split('+'));
+console.log('Walter White'.split(' '));
+
+const [firstName, lastName] = 'Walter White'.split(' ');
+
+const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
+console.log(newName);
+
+const passenger = 'jessica ann smith davis';
+
+const capitalizeName = name => {
+  const names = name.split(' ');
+  const namesUpper = [];
+
+  for (const n of names) {
+    // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+  }
+
+  console.log(namesUpper.join(' '));
+};
+
+capitalizeName('jessica ann smith davis');
+capitalizeName('walter white');
+
+// Padding
+const message = 'Go to gate 23!';
+console.log(message.padStart(25, '+').padEnd(30, '+'));
+console.log('JAkub'.padStart(25, '+').padEnd(30, '+'));
+
+// Masking function
+const maskCreditCard = number => {
+  const str = number + '';
+  const last = str.slice(-4);
+
+  return last.padStart(str.length, '*');
+};
+
+console.log(maskCreditCard(64637836));
+console.log(maskCreditCard(43378463864647384));
+console.log(maskCreditCard('334859493847755774747'));
+
+// Repeat
+const message2 = 'Bad weather... All Departues Delayed... ';
+console.log(message2.repeat(5));
+
+const planesInLine = n => {
+  console.log(`There are ${n} planes in line ${'🛩'.repeat(n)}`);
+};
+planesInLine(5);
+planesInLine(3);
+planesInLine(12);
+
+/*
+///////////////////////////////////////
 // Working With Strings - Part 2
 const airline = 'TAP Air Portugal';
 
@@ -96,12 +154,13 @@ const checkEmails = item => {
   let email = 'hello@jakub.io';
   const normalizedEmail = item.toLowerCase().trim();
 
-  return console.log(email === normalizedEmail);
+  if (email === normalizedEmail) return console.log(normalizedEmail);
+  else return console.log(email === normalizedEmail);
 };
 checkEmails('  Hello@Jakub.Io \n');
 checkEmails('  Hello@Jakub.Isso \n');
 
-// replacing
+// Replacing
 const priceGB = '288,97€';
 const priceUS = priceGB.replace('€', '$').replace(',', '.');
 console.log(priceUS);
@@ -111,7 +170,7 @@ const announcement =
 
 console.log(announcement.replace('door', 'gate'));
 console.log(announcement.replaceAll('door', 'gate')); // New method in JS
-console.log(announcement.replace(/door/g, 'gate'));
+console.log(announcement.replace(/door/g, 'gate')); // regular expression REGEX
 
 // Booleans
 const plane = 'Airbus A320neo';
@@ -135,6 +194,7 @@ const checkBaggage = items => {
 checkBaggage('I have laptop, some Food and a pocket Knife');
 checkBaggage('Socks and camera');
 checkBaggage('Got some snacks and a gun for protection');
+*/
 
 /*
 ///////////////////////////////////////
