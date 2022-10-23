@@ -22,6 +22,7 @@ const createBooking = function (
 
   console.log(booking);
   bookings.push(booking);
+  console.log(bookings);
 };
 
 createBooking('LH123');
@@ -42,7 +43,7 @@ const james = {
 
 const checkIn = (flightNum, passenger) => {
   flightNum = 'LH999';
-  passenger.name = 'Mr, ' + passenger.name;
+  passenger.name = 'Mr. ' + passenger.name;
 
   if (passenger.passport === 24739479284) alert('Check in');
   else alert('Wrong passport!');
@@ -52,12 +53,12 @@ const checkIn = (flightNum, passenger) => {
 // console.log(flight);
 // console.log(james);
 
-// Is the same as doing...
+// Is the same as doing... when we try to copy an object like this, we are really only copying the reference to that object in the memory heap,
 // const flightNum = flight;
 // const passenger = james;
 
 const newPassport = function (person) {
-  person.passport = Math.random() * 100000000000;
+  person.passport = Math.trunc(Math.random() * 100000000000);
 };
 
 newPassport(james);
