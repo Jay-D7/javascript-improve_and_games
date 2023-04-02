@@ -46,6 +46,31 @@ const restaurant = {
 // const size = Object.keys(restaurant).length;
 // console.log(size);
 
+/*
+///////////////////////////////////////
+// Rest Pattern and Parameters
+// 1) Destructuring
+
+// SPREAD, because on RIGHT side of '=' assignment operator
+const arr = [1, 2, [3, 4]];
+const [e, l, [j, k]] = arr;
+console.log(...arr, j, k);
+
+// REST, because on LEFT side of '='
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others);
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+console.log(pizza, risotto, otherFood);
+
+// Objects
+
+*/
+
+/*
 ///////////////////////////////////////
 // The Spread Operator (...)
 const arr = [7, 8, 9];
@@ -101,6 +126,7 @@ const restaurantCopy = { ...restaurant };
 restaurantCopy.name = 'Ristorante Roma';
 console.log(restaurantCopy.name);
 console.log(restaurant.name);
+*/
 
 /*
 ///////////////////////////////////////
@@ -185,3 +211,28 @@ console.log(i, j, k);
 const [p = 1, q = 1, r = 1] = [8, 9];
 console.log(p, q, r);
 */
+
+// const arr = [3, 4, 5];
+// const a = arr[0];
+// const b = arr[1];
+// const c = arr[2];
+
+// console.log(a, b, c);
+
+// const [x, y, z] = arr;
+
+// console.log(x, y, z);
+// console.log(arr);
+
+const arr = [3, 4, 5];
+
+const a = arr[0];
+const b = arr[1];
+const c = arr[2];
+
+console.log(a, b, c);
+
+const [x, y, z] = arr;
+
+console.log(x, y, z);
+console.log(arr);
