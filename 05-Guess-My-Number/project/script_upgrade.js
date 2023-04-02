@@ -1,12 +1,12 @@
 'use strict';
 
 // Define main variables
+const guess = document.querySelector('.guess');
 let secretNumber = Math.trunc(Math.random() * 20) + 1; // Always between 1-20
 let score = 20;
 let highscore = 0;
-const backgroundBody = document.querySelector('body');
-const numberWindowResize = document.querySelector('.number');
-const guess = document.querySelector('.guess');
+let backgroundBody = document.querySelector('body');
+let numberWindowResize = document.querySelector('.number');
 
 // Refactoring query selectors into functions for clearify code
 const displayMessage = message => {
@@ -24,14 +24,16 @@ const setScore = score => {
 // Select Check button
 const checkNumber = function () {
   document.querySelector('.check').addEventListener('click', () => {
-    const guess = Number(guess.value);
+    const guessing = Number(guess.value);
+
     console.log(guess, typeof guess);
+    console.log(guessing, typeof guessing);
 
     // When there is no input
-    if (!guess) {
+    if (!guessing) {
       displayMessage('No number⛔️');
       // When player wins
-    } else if (guess === secretNumber) {
+    } else if (guessing === secretNumber) {
       displayMessage('🎉 Correct number!');
       showNumber(secretNumber);
 
@@ -46,9 +48,11 @@ const checkNumber = function () {
       }
 
       // When the guess is wrong - Too high or low
-    } else if (guess !== secretNumber) {
+    } else if (guessing !== secretNumber) {
       if (score > 1) {
-        displayMessage(guess > secretNumber ? '📈 Too High!' : '📉 Too Low!');
+        displayMessage(
+          guessing > secretNumber ? '📈 Too High!' : '📉 Too Low!'
+        );
         score--;
         setScore(score);
       } else {
