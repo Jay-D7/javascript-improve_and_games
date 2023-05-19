@@ -172,7 +172,6 @@ const {
 console.log(o, c);
 */
 
-/*
 ///////////////////////////////////////
 // Destructuring Arrays
 const arr = [2, 3, 4];
@@ -180,6 +179,9 @@ const a = arr[0];
 const b = arr[1];
 const c = arr[2];
 
+console.log(a, b, c);
+
+// Destructuring ES6
 const [x, y, z] = arr;
 console.log(x, y, z);
 console.log(arr);
@@ -210,29 +212,3 @@ console.log(i, j, k);
 // Default values
 const [p = 1, q = 1, r = 1] = [8, 9];
 console.log(p, q, r);
-*/
-
-// const arr = [3, 4, 5];
-// const a = arr[0];
-// const b = arr[1];
-// const c = arr[2];
-
-// console.log(a, b, c);
-
-// const [x, y, z] = arr;
-
-// console.log(x, y, z);
-// console.log(arr);
-
-const arr = [3, 4, 5];
-
-const a = arr[0];
-const b = arr[1];
-const c = arr[2];
-
-console.log(a, b, c);
-
-const [x, y, z] = arr;
-
-console.log(x, y, z);
-console.log(arr);
