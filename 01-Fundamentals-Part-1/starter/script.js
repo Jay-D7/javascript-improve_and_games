@@ -6,6 +6,7 @@
 
 ////////////////////////////////////
 // Values and Variables
+console.log(`Lecture 1`);
 // console.log('Jakub');
 // console.log(23);
 
@@ -139,29 +140,25 @@ let language;
 
 // console.log(now - 1991 > now - 2018);
 
+// LECTURE: Basic Operators
+
 let myCountry = 40000000;
 console.log(myCountry / 2);
 myCountry++;
 console.log(myCountry);
+
 const populationOfFinland = 6000000;
 console.log(myCountry > populationOfFinland);
-const averagePopulation = 33000000;
 
+const averagePopulation = 33000000;
 console.log(myCountry <= averagePopulation);
+
 myCountry = 'Poland';
 language = 'Polish';
 const description = `${myCountry} is in Europe, and its ${averagePopulation} people speak ${language}`;
 console.log(description);
 console.log('\n' + '\n' + '\n');
 
-// LECTURE: Basic Operators
-
-let countryLecture = 4000000;
-console.log(countryLecture / 2);
-countryLecture++;
-console.log(countryLecture);
-
-console.log('TUTAJ JESTEM');
 ////////////////////////////////////
 // Operator Precedence
 const now = 2037;

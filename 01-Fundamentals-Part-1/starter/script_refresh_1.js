@@ -15,6 +15,7 @@ console.log(`\nLecture 2`);
 
 const isIsland = true;
 let language;
+
 console.log(typeof isIsland);
 console.log(typeof population);
 console.log(typeof country);
