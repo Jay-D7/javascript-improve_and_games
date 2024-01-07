@@ -111,3 +111,4 @@ console.log(markHigherBMI);
 // LECTURE: Equality Operators: == vs. ===
 
 //Coding Challenge 2
+//  this will be a new challenge!
