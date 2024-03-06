@@ -91,10 +91,10 @@ let heightMark = 1.69;
 let massJohn = 92;
 let heightJohn = 1.95;
 
-// massMark = 95;
-// heightMark = 1.88;
-// massJohn = 85;
-// heightJohn = 1.76;
+// let massMark = 95;
+// let heightMark = 1.88;
+// let massJohn = 85;
+// let heightJohn = 1.76;
 
 // 2.
 const markBMI = massMark / heightMark ** 2;
@@ -102,7 +102,7 @@ const JohnBMI = massJohn / heightJohn ** 2;
 console.log(markBMI, JohnBMI);
 // 3.
 markHigherBMI = markBMI > JohnBMI;
-console.log(markHigherBMI);
+console.log(`Result of task ${markHigherBMI}`);
 
 // LECTURE: Strings and Template Literals
 
