@@ -61,9 +61,16 @@ console.log(
   } average.`
 );
 
-const description = `${country} is in ${continent}, and its ${population} milion people speak ${language}.`;
+const description1 =
+  country +
+  ' is in ' +
+  continent +
+  ", and it's " +
+  population +
+  ' million people speak ' +
+  language;
 
-console.log(description);
+console.log(description1);
 
 ////////////////////////////////////
 // Coding Challenge #1
@@ -105,6 +112,8 @@ markHigherBMI = markBMI > JohnBMI;
 console.log(`Result of task ${markHigherBMI}`);
 
 // LECTURE: Strings and Template Literals
+const description = `${country} is in ${continent}, and it's ${population} milion people speak ${language}.`;
+console.log(description);
 
 // LECTURE: Taking Decisions: if / else Statements
 
