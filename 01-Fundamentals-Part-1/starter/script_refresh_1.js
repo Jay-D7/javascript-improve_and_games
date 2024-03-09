@@ -45,7 +45,7 @@ console.log(lectureMyCountry <= averagePopulation);
 const description = `${country} is in ${continent}, and it's ${population} milion people speak ${language}`;
 console.log(description);
 
-// LECTURE: Strings and Template Literals
+// LECTURE: Strings and Template Literals ABOVE
 console.log(`\nCoding Challenge #1`);
 
 // Coding Challenge #1
