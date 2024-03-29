@@ -3,7 +3,7 @@ console.log(`Lecture 1`);
 
 const country = 'Poland';
 const continent = 'Europe';
-let population = 8000000;
+let population = 710000000;
 
 console.log(country, continent, population);
 
@@ -24,7 +24,7 @@ console.log(
 console.log(`\nLecture 3`);
 
 language = 'Polish';
-population = 400000;
+population = 741800000;
 console.log(language, population);
 
 // LECTURE: Basic Operators
@@ -43,7 +43,7 @@ console.log(
   } people than Finland.`
 );
 
-const populationPl = 29000;
+const populationPl = 40400000;
 const populationPlAverage = (population) => {
   const a = populationPl > population ? 'above' : 'below';
 
@@ -116,6 +116,30 @@ const description = `${country} is in ${continent}, and it's ${population} milio
 console.log(description);
 
 // LECTURE: Taking Decisions: if / else Statements
+
+const countryGreater = function () {
+  const average = 33000000;
+  let population = 403040455;
+  let country = 'Poland';
+
+  if (country != '') {
+    if (population > average) {
+      console.log(
+        `${country}'s population (${population}) is above average(300000)`
+      );
+    } else {
+      console.log(
+        `${country}'s population (${population}) is 22 milion below average(300000)`
+      );
+    }
+  } else {
+    console.log(`Country isn't defined`);
+  }
+};
+
+countryGreater();
+
+// LECTURE: Type Conversion and Coercion
 
 // LECTURE: Equality Operators: == vs. ===
 
