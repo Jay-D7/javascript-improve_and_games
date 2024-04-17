@@ -72,7 +72,6 @@ const description1 =
 
 console.log(description1);
 
-////////////////////////////////////
 // Coding Challenge #1
 console.log('\n Coding Challenge #1');
 
@@ -104,11 +103,11 @@ let heightJohn = 1.95;
 // let heightJohn = 1.76;
 
 // 2.
-const markBMI = massMark / heightMark ** 2;
-const JohnBMI = massJohn / heightJohn ** 2;
-console.log(markBMI, JohnBMI);
+const BMIMark = massMark / heightMark ** 2;
+const BMIJohn = massJohn / heightJohn ** 2;
+console.log(BMIMark, BMIJohn);
 // 3.
-markHigherBMI = markBMI > JohnBMI;
+markHigherBMI = BMIMark > BMIJohn;
 console.log(`Result of task ${markHigherBMI}`);
 
 // LECTURE: Strings and Template Literals
@@ -116,7 +115,6 @@ const description = `${country} is in ${continent}, and it's ${population} milio
 console.log(description);
 
 // LECTURE: Taking Decisions: if / else Statements
-
 const countryGreater = function () {
   const average = 33000000;
   let population = 403040455;
@@ -125,11 +123,11 @@ const countryGreater = function () {
   if (country != '') {
     if (population > average) {
       console.log(
-        `${country}'s population (${population}) is above average(300000)`
+        `${country}'s population (${population}) is above average(${average})`
       );
     } else {
       console.log(
-        `${country}'s population (${population}) is 22 milion below average(300000)`
+        `${country}'s population (${population}) is 22 milion below average(${average})`
       );
     }
   } else {
@@ -139,9 +137,13 @@ const countryGreater = function () {
 
 countryGreater();
 
+//Coding Challenge 2
+if (BMIMark > BMIJohn) {
+  console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!"`);
+} else {
+  console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!"`);
+}
+
 // LECTURE: Type Conversion and Coercion
 
 // LECTURE: Equality Operators: == vs. ===
-
-//Coding Challenge 2
-//  this will be a new challenge 2 Hurra!
