@@ -1,5 +1,5 @@
 // LECTURE: Values and Variables
-console.log(`Lecture 1`);
+console.log(`Lecture 1: Values and Variables`);
 
 let country = 'Poland';
 let continent = 'Europe';
@@ -8,7 +8,7 @@ let population = 710000000;
 console.log(country, continent, population);
 
 // LECTURE: Data Types
-console.log(`\nLecture 2`);
+console.log(`\nLecture 2: Data Types`);
 
 let isIsland = false;
 let language;
@@ -21,7 +21,7 @@ console.log(
 );
 
 // LECTURE: let, const and var
-console.log(`\nLecture 3`);
+console.log(`\nLecture 3: let, const and var`);
 
 language = 'Polish';
 population = 741800000;
@@ -34,7 +34,7 @@ language = 'portuguese';
 isIsland = true;
 
 // LECTURE: Basic Operators
-console.log(`\nLecture 4 - Basic Operators`);
+console.log(`\nLecture 4: Basic Operators`);
 
 let splitCountryInHalf = population / 2;
 console.log(splitCountryInHalf);
@@ -111,23 +111,27 @@ let heightJohn = 1.95;
 // 2.
 const BMIMark = massMark / heightMark ** 2;
 const BMIJohn = massJohn / heightJohn ** 2;
+// equally well you can use
+// const BMIJohn = massJohn / heightJohn * heightJohn;
 console.log(BMIMark, BMIJohn);
 // 3.
 markHigherBMI = BMIMark > BMIJohn;
-console.log(`Result of task ${markHigherBMI}`);
+console.log(`Result of task: ${markHigherBMI}`);
 
 // LECTURE: Strings and Template Literals
-console.log(`\nLecture 5 - Strings and Template Literals`);
+console.log(`\nLecture 5: Strings and Template Literals`);
 
 const description = `${country} is in ${continent}, and it's ${population} milion people speak ${language}.`;
 console.log(description);
 
 // LECTURE: Taking Decisions: if / else Statements
-console.log(`\nLecture 6 - Taking Decisions: if / else Statements`);
-const countryGreater = function () {
-  let average = 33000000;
-  let populationOfCountry = 403040455;
-  let country = 'Poland';
+console.log(`\nLecture 6: Taking Decisions: if / else Statements`);
+
+const countryGreater = function (average, populationOfCountry, country) {
+  // Option 1 //
+  // let average = 33000000;
+  // let populationOfCountry = 403040455;
+  // let country = 'Poland';
 
   if (country != '') {
     if (populationOfCountry > average) {
@@ -144,7 +148,8 @@ const countryGreater = function () {
   }
 };
 
-countryGreater();
+//              Option 2 //
+countryGreater(33000000, 403040455, 'Poland');
 
 //Coding Challenge 2
 console.log('\nCoding Challenge #2');
@@ -155,15 +160,18 @@ is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark
 Use a template literal to include the BMI values in the outputs. Example: "Mark's
 BMI (28.3) is higher than John's (23.9)!"
 */
-
-if (BMIMark > BMIJohn) {
-  console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!"`);
-} else {
-  console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!"`);
+function higherBMI() {
+  if (BMIMark > BMIJohn) {
+    console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`);
+  } else {
+    console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!`);
+  }
 }
 
+higherBMI();
+
 // LECTURE: Type Conversion and Coercion
-console.log(`\nLecture 7 - Type Conversion and Coercion`);
+console.log(`\nLecture 7: Type Conversion and Coercion`);
 
 console.log('9' - '5'); // 4
 console.log('19' - '13' + '17'); // '617'
@@ -172,6 +180,9 @@ console.log('123' < 57); // false
 console.log(5 + 6 + '4' + 9 - 4 - 2); // 1143
 
 // LECTURE: Equality Operators: == vs. ===
+console.log(
+  `\nLecture 8: Equality Operators: == vs. === \n Must be commented because of PROMPT`
+);
 // DONE
 // Must be commented because of PROMPT
 // const numNeighbours = Number(
@@ -187,21 +198,12 @@ console.log(5 + 6 + '4' + 9 - 4 - 2); // 1143
 // }
 
 // LECTURE: Logical Operators
-// TODO
-// Let's say Sarah is looking for a new country to live in. She wants to live in a
-// country that speaks english, has less than 50 million people and is not an
-// island.
-// Write an if statement to help Sarah figure out if your country is right for her.
-// You will need to write a condition that accounts for all of Sarah's criteria. Take
-// your time with this, and check part of the solution if necessary.
-// If yours is the right country, log a string like this: 'You should live in Portugal :)'. If
-// not, log 'Portugal does not meet your criteria :('
-// Probably your country does not meet all the criteria. So go back and temporarily
-// change some variables in order to make the condition true (unless you live in
-// Canada :D)
+console.log(`\nLecture 9: Logical Operators`);
+
 const rightCountry = function () {
   let language = 'Polish';
   let population = 4000000;
+
   if (language === 'Polish' && population < 5000000 && country != isIsland) {
     console.log(`You should live in Poland`);
   } else {
@@ -212,4 +214,61 @@ const rightCountry = function () {
 rightCountry();
 
 // TODO
+// Coding Challenge #3
+console.log('\nCoding Challenge #3');
+
+/*
+There are two gymnastics teams, Dolphins and Koalas. They compete against each
+other 3 times. The winner with the highest average score wins a trophy!
+Your tasks:
+1. Calculate the average score for each team, using the test data below
+2. Compare the team's average scores to determine the winner of the competition,
+and print it to the console. Don't forget that there can be a draw, so test for that
+as well (draw means they have the same average score)
+3. Bonus 1: Include a requirement for a minimum score of 100. With this rule, a
+team only wins if it has a higher score than the other team, and the same time a
+score of at least 100 points. Hint: Use a logical operator to test for minimum
+score, as well as multiple else-if blocks 😉
+4. Bonus 2: Minimum score also applies to a draw! So a draw only happens when
+both teams have the same score and both have a score greater or equal 100
+points. Otherwise, no team wins the trophy
+Test data:
+§ Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+§ Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
+§ Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
+*/
+
+//1 Average score
+// const scoreDolphins = (96 + 108 + 89) / 3;
+// const scoreKoalas = (88 + 91 + 110) / 3;
+//Bonus 1
+const scoreDolphins = (97 + 112 + 101) / 3;
+const scoreKoalas = (109 + 95 + 123) / 3;
+// Bonus 2
+// const scoreDolphins = (97 + 112 + 101) / 3;
+// const scoreKoalas = (109 + 95 + 106) / 3;
+console.log(scoreDolphins, scoreKoalas);
+const minScore = 100;
+
+//2 Compare the team's average scores
+const compareAverageScores = function () {
+  if (scoreDolphins > scoreKoalas && scoreDolphins >= minScore) {
+    console.log(`Winner is Dolphins ${scoreDolphins}`);
+  } else if (scoreKoalas > scoreDolphins && scoreKoalas >= minScore) {
+    console.log(`Winner is Koalas ${scoreKoalas}`);
+  } else if (
+    scoreDolphins === scoreKoalas &&
+    scoreDolphins >= minScore &&
+    scoreKoalas >= minScore
+  ) {
+    console.log(`This is draw`);
+  } else {
+    console.log(`Nobody wins 😿`);
+  }
+};
+
+compareAverageScores();
+
+// TODO
 // LECTURE: The switch Statement
+console.log(`\nLecture 10:The switch Statement`);
