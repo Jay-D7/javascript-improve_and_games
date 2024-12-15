@@ -23,11 +23,11 @@ console.log(
 // LECTURE: let, const and var
 console.log(`\nLecture 3: let, const and var`);
 
-language = 'Portuguese';
+language = 'Polish';
 population = 741800000;
 console.log(language, population);
 
-language = 'Polish';
+language = 'portuguese';
 // const country = 'Portugal';
 // const continent = 'Europe';
 // const isIsland = false;
@@ -67,7 +67,7 @@ console.log(
   } average.`
 );
 
-let description =
+const description1 =
   country +
   ' is in ' +
   continent +
@@ -76,7 +76,7 @@ let description =
   ' million people speak ' +
   language;
 
-console.log(description);
+console.log(description1);
 
 // Coding Challenge #1
 console.log('\nCoding Challenge #1');
@@ -121,7 +121,7 @@ console.log(`Result of task: ${markHigherBMI}`);
 // LECTURE: Strings and Template Literals
 console.log(`\nLecture 5: Strings and Template Literals`);
 
-description = `${country} is in ${continent}, and it's ${population} milion people speak ${language}.`;
+const description = `${country} is in ${continent}, and it's ${population} milion people speak ${language}.`;
 console.log(description);
 
 // LECTURE: Taking Decisions: if / else Statements
@@ -267,9 +267,16 @@ const compareAverageScores = function () {
 
 compareAverageScores();
 
+// TODO
 // LECTURE: The switch Statement
-console.log(`\nLecture 10: The switch Statement`);
-
+console.log(`\nLecture 10:The switch Statement`);
+// 1. Use a switch statement to log the following string for the given 'language':
+// chinese or mandarin: 'MOST number of native speakers!'
+// spanish: '2nd place in number of native speakers'
+// english: '3rd place'
+// hindi: 'Number 4'
+// arabic: '5th most spoken language'
+// for all other simply log 'Great language too :D'
 language = 'chinese';
 function nativeSpeakers() {
   switch (language) {
@@ -296,21 +303,3 @@ function nativeSpeakers() {
 }
 
 nativeSpeakers();
-
-// LECTURE: The Conditional (Ternary) Operator
-console.log(`\nLecture 10: The Conditional (Ternary) Operator`);
-
-const populationGreater = (population) => {
-  let number = 33000000;
-  let count = population > number ? 'above' : 'below';
-
-  return `${country}'s, ${population} is ${count} average`;
-};
-
-console.log(populationGreater(population));
-
-// console.log(
-//   `${country} population is ${
-//     populationPl > 3000000 ? 'above' : 'below'
-//   } average.`
-// );
