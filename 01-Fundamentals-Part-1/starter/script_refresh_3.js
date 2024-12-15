@@ -183,7 +183,6 @@ console.log(5 + 6 + '4' + 9 - 4 - 2); // 1143
 console.log(
   `\nLecture 8: Equality Operators: == vs. === \n Must be commented because of PROMPT`
 );
-// DONE
 // Must be commented because of PROMPT
 // const numNeighbours = Number(
 //   prompt('How many neighbour countries does your country have?')
@@ -213,7 +212,6 @@ const rightCountry = function () {
 
 rightCountry();
 
-// TODO
 // Coding Challenge #3
 console.log('\nCoding Challenge #3');
 
@@ -247,7 +245,7 @@ const scoreKoalas = (109 + 95 + 123) / 3;
 // Bonus 2
 // const scoreDolphins = (97 + 112 + 101) / 3;
 // const scoreKoalas = (109 + 95 + 106) / 3;
-console.log(scoreDolphins, scoreKoalas);
+console.log(`Score Dolphins: ${scoreDolphins} \nScore Koalas: ${scoreKoalas}`);
 const minScore = 100;
 
 //2 Compare the team's average scores
@@ -272,3 +270,36 @@ compareAverageScores();
 // TODO
 // LECTURE: The switch Statement
 console.log(`\nLecture 10:The switch Statement`);
+// 1. Use a switch statement to log the following string for the given 'language':
+// chinese or mandarin: 'MOST number of native speakers!'
+// spanish: '2nd place in number of native speakers'
+// english: '3rd place'
+// hindi: 'Number 4'
+// arabic: '5th most spoken language'
+// for all other simply log 'Great language too :D'
+language = 'chinese';
+function nativeSpeakers() {
+  switch (language) {
+    case 'chinese':
+    case 'mandarin':
+      console.log('MOST number of native speakers!');
+      break;
+    case 'spanish':
+      console.log('2nd place in number of native speakers');
+      break;
+    case 'english':
+      console.log('3rd place');
+      break;
+    case 'hindi':
+      console.log('Number 4');
+      break;
+    case 'arabic':
+      console.log('5th most spoken language');
+      break;
+
+    default:
+      console.log('Great language too :D');
+  }
+}
+
+nativeSpeakers();
