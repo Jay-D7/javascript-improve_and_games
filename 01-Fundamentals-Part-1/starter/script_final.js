@@ -320,7 +320,7 @@ console.log(populationGreater(population));
 // );
 
 // // Coding Challenge #4
-// console.log('\nCoding Challenge #4');
+console.log('\nCoding Challenge #4');
 
 // /*
 // Steven wants to build a very simple tip calculator for whenever he goes eating in a resturant.
@@ -340,4 +340,18 @@ console.log(populationGreater(population));
 
 // GOOD LUCK 😀
 // */
-// const bill = 275; //tip: 41.25, total: 316.25
+const bill = 275; //tip: 41.25, total: 316.25
+// const bill = 40; // 8, total 48
+// const bill = 430; //86, total 516
+
+const calculateTip = function () {
+  const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+  console.log(
+    `The bill was ${bill}, the tip was ${tip}, and the total value: ${
+      tip + bill
+    }`
+  );
+};
+
+calculateTip();
