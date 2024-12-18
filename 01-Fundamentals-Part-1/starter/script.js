@@ -353,7 +353,7 @@ if (height) {
 
 // if (favourite === 23) {
 //   // 22 === 23 -> FALSE
-//   console.log('Cool! 23 is an amzaing number!');
+//   console.log('Cool! 23 is an amazing number!');
 // } else if (favourite === 7) {
 //   console.log('7 is also a cool number');
 // } else if (favourite === 9) {
