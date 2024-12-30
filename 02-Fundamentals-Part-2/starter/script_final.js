@@ -9,12 +9,13 @@ if (hasDriversLicense) console.log(`I can drive 💪🏻`);
 
 // LECTURE: Functions
 console.log(`\nLecture 1: Functions`);
-
+// 1. Option Function Declaration (can be called before it's defined)
 // function describeCountry(country, population, capitalCity) {
 //   return `${country} has ${population} million people and its capital city is ${capitalCity}`;
 // }
 
-function describeCountry(
+// 2. Option Function Expression (can't be called before it's defined)
+const describeCountry = function (
   country = 'Unknown',
   population = 0,
   capitalCity = 'Unknown'
@@ -27,7 +28,7 @@ function describeCountry(
     throw new Error('Invalid input types');
   }
   return `${country} has ${population} million people and its capital city is ${capitalCity}`;
-}
+};
 
 const descPoland = describeCountry('Poland', 39, 'Warsaw');
 const descGermany = describeCountry('Germany', 83, 'Berlin');
@@ -57,3 +58,23 @@ const indonesiaPopulation = percentageOfWorld2(273);
 const pakistanPopulation = percentageOfWorld2(220);
 const brazilPopulation = percentageOfWorld2(213);
 console.log(indonesiaPopulation, pakistanPopulation, brazilPopulation);
+
+// LECTURE: Arrow Functions
+console.log(`\nLecture 3: Arrow Functions`);
+
+const percentageOfWorld3 = (population) => (population / 7900) * 100;
+
+// Upgraded version of the previous function with error handling
+// const percentageOfWorld3 = (population) => {
+//   if (typeof population !== 'number' || population <= 0) {
+//     throw new Error('Invalid population value');
+//   }
+//   const worldPopulation = 7900;
+//   return (population / worldPopulation) * 100;
+// };
+
+console.log(
+  percentageOfWorld3(1441),
+  percentageOfWorld3(1380),
+  percentageOfWorld3(331)
+);
